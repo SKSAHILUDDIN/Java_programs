@@ -14,29 +14,24 @@ public class Rock_paper_Scissors_game {
         System.out.println("**---------- We have 5 rounds of the game----------**  \n ----------Lets start----------");
 
         Scanner sc = new Scanner(System.in);
-       /* int randomIntBounded = random.nextInt(0,3);
-        if (randomIntBounded== 0){
-            System.out.println("Rock");}
-        else if  (randomIntBounded== 1){
-            System.out.println("Paper");}
-        else if (randomIntBounded== 2){
-            System.out.println("Scissor");}*/
         System.out.println("rock= 0 , Paper = 1, Scissor = 2");
         int winningrateforcomputer=0;
         int winningrateforyou=0;
         for (int i=0;i<5;i++){
             System.out.println(" Enter your choice: ");
             int ch = sc.nextInt();
-            System.out.println("Computer choice: "+ Computer());
+            int val = Computer();
+            System.out.println("Computer choice: "+ val);
 
-            if((ch==0 && Computer()==0) ||(ch==1 && Computer()==1)||(ch==2 && Computer()==2)){
+            if((ch==0 && val==0) ||(ch==1 && val==1)||(ch==2 && val==2)){
                 System.out.println("Draw");
+                break;
             }
-            if((ch==0 && Computer()==1)||(ch==2 && Computer()==0)) {
+            else if((ch==0 && val==1)||(ch==2 && val==0)) {
                 System.out.println("Computer wins");
                 winningrateforcomputer++;
             }
-            if((ch==0 && Computer()==2)||(ch==1 && Computer()==0)) {
+            else if((ch==0 && val==2)||(ch==1 && val==0)) {
                 System.out.println("You win");
                 winningrateforyou++;
             }
