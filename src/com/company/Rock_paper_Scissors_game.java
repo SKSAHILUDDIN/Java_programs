@@ -25,13 +25,12 @@ public class Rock_paper_Scissors_game {
 
             if((ch==0 && val==0) ||(ch==1 && val==1)||(ch==2 && val==2)){
                 System.out.println("Draw");
-                break;
             }
-            else if((ch==0 && val==1)||(ch==2 && val==0)) {
+            else if((ch==0 && val==1)||(ch==1 && val==2)||(ch==2 && val==0)) {
                 System.out.println("Computer wins");
                 winningrateforcomputer++;
             }
-            else if((ch==0 && val==2)||(ch==1 && val==0)) {
+            else if((ch==0 && val==2)||(ch==1 && val==0)||(ch==2 && val==1)) {
                 System.out.println("You win");
                 winningrateforyou++;
             }
